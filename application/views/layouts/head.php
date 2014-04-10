@@ -16,5 +16,4 @@ if (!empty($this->data['_head']['description'])) {
 .navbar {
     min-height:30px;
 }
-
 </style>

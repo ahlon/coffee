@@ -24,13 +24,17 @@ class Base_model extends CI_Model {
     }
     
     public function find_all($params = array(), $orderby = null, $page_size = 0, $page = 1) {
-        $this->db->from($this->table_name)->where($params);
-        if (!empty($orderby)) {
-            $this->db->order_by($orderby);
-        } else {
-            $this->db->order_by('id desc');
+        $this->db->from($this->table_name);
+        $this->db->where($params);
+        if ($orderby) {
+            if (is_array($orderby)) {
+                $this->db->order_by($orderby['column'], $orderby['sort']);
+            }
+            if (is_string($orderby)) {
+                $this->db->order_by($orderby);
+            }
         }
-        if (!empty($page_size) && !empty($page)) {
+        if ($page_size && $page) {
             $start = $page_size * ($page - 1);
             $this->db->limit($page_size, $start);
         }

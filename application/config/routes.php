@@ -71,5 +71,7 @@ $route['login'] = 'home/login';
 $route['auth'] = 'home/auth';
 $route['register'] = 'home/register';
 
+
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
