@@ -12,11 +12,17 @@ class Home extends Base_Controller {
         $this->widgets['footer'] = new Widget('footer', $this->data);
     }
     
+    /**
+     * 登录页面
+     */
     function login() {
         $this->widgets['content'] = new Widget('login', $this->data); 
         $this->render();
     }
     
+    /**
+     * 认证，授权
+     */
     function auth() {
         $this->load->service('user_service');
         $post = $this->input->post();
@@ -34,6 +40,9 @@ class Home extends Base_Controller {
         }
     }
     
+    /**
+     * 注册
+     */
     function register() {
         $this->load->service('user_service');
         $post = $this->input->post();
@@ -52,6 +61,9 @@ class Home extends Base_Controller {
         }
     }
     
+    /**
+     * 退出
+     */
     function logout() {
     
     }

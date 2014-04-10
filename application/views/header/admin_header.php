@@ -1,36 +1,27 @@
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="/">Macitoo</a> 
-            <ul class="nav">
-                <li><a href="/admin/users">用户</a></li>
-                <li><a href="/admin/groups">群组</a></li>
-                <li><a href="/admin/resources">资源</a></li>
-                <li><a href="/admin/categories">分类</a></li>
-                <li><a href="/admin/mottos">箴言</a></li>
-            </ul>
-            <ul class="nav pull-right">
-                <?php 
-                if (empty($user_info)) {
-                ?>
+<nav class="collapse navbar-inverse navbar-collapse bs-navbar-collapse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Coffee</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/admin/user">用户</a></li>
+                <li><a href="/admin/trace">日志</a></li>
+          </ul>         
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="/login">登录</a></li>
-                <li><a href="/signup">注册</a></li>                
-                <?php
-                } else {
-                ?>
-                <li><a href="/msgs">消息</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<?php echo $user_info['avatar_url']?>"/> <?php echo @$user_info['display_name'];?><b class="caret"></b></a>
-                    <ul class="dropdown-menu"> 
-                        <li><a href="/settings"><i class="icon-cog"></i> 设置</a></li>
-                        <li><a href="/logout"><i class="icon-off"></i> 退出</a></li>
-                    </ul>
-                </li>
-                <?php
-                }
-                ?>
-                <li class="divider-vertical"></li>
+                <li><a href="/register">注册</a></li>
+                <!--  
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul></li>
+                -->
             </ul>
         </div>
     </div>
-</div>
+</nav>

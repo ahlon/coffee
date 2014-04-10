@@ -45,7 +45,8 @@ class Common_service extends Base_service {
      * 获取所有业务对象
      */
     function get_all() {
-        return $this->model->find_all(array(), 'id');
+        // return $this->model->find_all(array(), 'id');
+        return $this->search(array(), 'id', 0, 1);
     }
     
     /**

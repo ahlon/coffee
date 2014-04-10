@@ -7,11 +7,10 @@ CREATE TABLE `user` (
   `password` varchar(40) NOT NULL,
   `gender` varchar(10) DEFAULT NULL,
   `city` varchar(20) DEFAULT NULL,
-  `last_login_time` datetime DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL,
+  `last_login_time` datetime DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `nickname` (`nickname`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -15,7 +15,7 @@ abstract class Admin_Controller extends Auth_Controller {
         
         $this->layout = 'layouts/common_layout';
         $this->widgets['header'] = array(
-    	    // new Widget('header/admin_header')
+    	    new Widget('header/admin_header')
     		// new Widget('admin/admin_nav2', $this->data)
 		); // Widget::get_instance('admin/admin_nav', $this->data),
         $this->widgets['footer'] = new Widget('admin_footer', $this->data); // Widget::get_instance('footer', $this->data)
