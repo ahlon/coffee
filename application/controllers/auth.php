@@ -16,7 +16,6 @@ class Auth_Controller extends Base_Controller {
         }
     }
     
-    
     function check_rights($real_rights = false) {
         return true;
     }

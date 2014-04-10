@@ -37,7 +37,7 @@ abstract class Base_Controller extends CI_Controller {
         $this->url_suffix = $dotpos > 0 ? substr($this->uri->uri_string, $dotpos + 1) : '';
         
         $this->layout = 'layouts/simple_layout';
-        $this->widgets['_assets'] = new Widget('head/common_head');
+        $this->widgets['_assets'] = new Widget('assets/common_assets');
     }
     
     function render($_config = null) {
