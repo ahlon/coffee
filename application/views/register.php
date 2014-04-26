@@ -7,6 +7,11 @@
             <li class="active"><a href="/register">注册</a></li>
         </ul>
         <div class="tab-pane well" id="signup">
+            <div class="alert alert-danger fade in">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4>Oh snap! You got an error!</h4>
+                <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+            </div>
             <form action="register" method="post">
                 <div class="form-group">
                     <label>昵称</label>
