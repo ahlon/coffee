@@ -87,6 +87,4 @@ class Common extends Base_Controller {
         $this->service->remove($id);
         redirect($this->obj_type);
     }
-    
-
 }

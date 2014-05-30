@@ -27,9 +27,13 @@ class Common_model extends Base_model {
     public function load($id) {
         return $this->db->from($this->table_name)->where(array('id' => $id))->get()->row_array();
     }
-    
-    public function find_one($params) {
-        return $this->db->from($this->table_name)->where($params)->get()->row_array();
+
+    public function find_one($params, $orderby = null) {
+        return $this->db->from($this->table_name)->where($params);
+        if (!empty($orderby)) {
+            $this->db->order_by($orderby);
+        }
+        $this->db->get()->row_array();
     }
     
     public function find_all($params = array(), $orderby = null, $page_size = 0, $page = 1) {
@@ -114,11 +118,6 @@ class Common_model extends Base_model {
         }
         $this->db->where($params)->delete($this->table_name);
     }
-    
-    //     function get_first() {
-    //         return $this->db->from($this->table_name)->order_by('id asc')->limit(1, 0)->get()->row_array();
-    //     }
-    
 
     function get_last() {
         return $this->db->from($this->table_name)->order_by('id desc')->limit(1, 0)->get()->row_array();
