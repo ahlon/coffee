@@ -20,7 +20,7 @@ class Zone_service extends Base_service {
 
     function get_parent($id) {
 		$params = array('parent_id' => $id);
-    	return $this->zone_model->($params);
+    	return $this->zone_model->find_one($params);
     }
 
     function get_ancestors($id) {

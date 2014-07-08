@@ -13,7 +13,7 @@ class User_service extends Base_service {
      * @return [type] [description]
      */
     function register($user) {
-
+        $this->user_model->save($user);
     }
 
     /**
@@ -45,18 +45,6 @@ class User_service extends Base_service {
     }
 
     function change_pwd() {
-
-    }
-
-    function update($user) {
-
-    }
-
-    function search($params) {
-
-    }
-
-    function count($params) {
 
     }
 

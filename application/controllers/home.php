@@ -47,10 +47,12 @@ class Home extends Base_Controller {
         $this->load->service('user_service');
         $post = $this->input->post();
         if (empty($post)) {
+            // 提交注册
             $this->widgets['content'] = new Widget('register', $this->data);
             $this->render();
             return;
         } else {
+            // 访问注册页面
             $user = array(
                 'nickname'=>$post['nickname'],      
                 'email'=>$post['email'],
